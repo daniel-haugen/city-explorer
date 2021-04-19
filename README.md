@@ -45,16 +45,16 @@ For each of the lab features, make an estimate of the time it will take you to c
 Name of feature: Setup React repo & api
 Estimate of time needed to complete: 1 hour
 Start time: 1:05pm
-Finish time: 
-Actual time needed to complete:
+Finish time: 2:02pm
+Actual time needed to complete: 57 minutes
 
-Name of feature: Setup API call to Location IQ
+Name of feature: Setup API call to Location IQ and return Data
 Estimate of time needed to complete: 2 hours
-Start time:
+Start time: 2:02pm
 Finish time:
 Actual time needed to complete:
 
-Name of feature: Return API call and render data
+Name of feature: Render map location
 Estimate of time needed to complete: 2 hours 
 Start time:
 Finish time:
