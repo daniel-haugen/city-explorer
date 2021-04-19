@@ -43,9 +43,9 @@ Time Estimates
 For each of the lab features, make an estimate of the time it will take you to complete the feature, and record your start and finish times for that feature:
 
 Name of feature: Setup React repo & api
-Estimate of time needed to complete: 30 mins
+Estimate of time needed to complete: 1 hour
 Start time: 1:05pm
-Finish time: 1:47pm
+Finish time: 
 Actual time needed to complete:
 
 Name of feature: Setup API call to Location IQ
