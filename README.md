@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# City Explorer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Author**: Daniel Haugen
+**Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
 
-## Available Scripts
+## Overview
+<!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
+The City Explorer app is designed to provide 
 
-In the project directory, you can run:
+## Getting Started
+<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+ 
+(Make sure you have a version of Node.js downloaded on your computer)
+ 1. Clone the repo down to your local machine.
+ 2. Navigate to your local copy of the repo and run this command to install app dependencies: `npm install`
+ 3. Then run `npm start` to bring the app up in your web browser.
 
-### `npm start`
+## Architecture
+<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+| Libraries / Languages | Details |
+| -- | -- |
+| [axios](https://www.npmjs.com/package/axios) | axios is an imported library to make API calls to locationIQ |
+| [locationIQ](https://locationiq.com) | LocationIQ is used to return a city's longitude and latitude |
+|  |  |
+|  |  |
+|  |  |
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Change Log
+<!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
 
-### `npm test`
+| Date | Change Details |
+| - | - |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Credit and Collaborations
+<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
+Time Estimates
+For each of the lab features, make an estimate of the time it will take you to complete the feature, and record your start and finish times for that feature:
 
-### `npm run build`
+Name of feature: Setup React repo & api
+Estimate of time needed to complete: 30 mins
+Start time: 1:05pm
+Finish time: 1:47pm
+Actual time needed to complete:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Name of feature: Setup API call to Location IQ
+Estimate of time needed to complete: 2 hours
+Start time:
+Finish time:
+Actual time needed to complete:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Name of feature: Return API call and render data
+Estimate of time needed to complete: 2 hours 
+Start time:
+Finish time:
+Actual time needed to complete:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+Name of feature: 
+Estimate of time needed to complete: 
+Start time:
+Finish time:
+Actual time needed to complete:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Name of feature: 
+Estimate of time needed to complete: 
+Start time:
+Finish time:
+Actual time needed to complete:
