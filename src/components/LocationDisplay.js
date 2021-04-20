@@ -7,29 +7,19 @@ class LocationDisplay extends React.Component {
       <>
         {this.props.cityName && (
           <Container fluid>
-            <Card
-              style={{
-                maxWidth: "55%",
-                margin: "0 auto",
-                backgroundColor: "lightblue",
-                marginTop: "50px"
-              }}
-              className="mb-2"
-            >
-              <Card.Body>
-                <Card.Title>{this.props.cityName}</Card.Title>
-                <Card.Text style={{ fontWeight: "bold" }}>
-                  Latitude: {this.props.lat}
-                </Card.Text>
-                <Card.Text>Longitude: {this.props.lon}</Card.Text>
+            <Card>
+              <Card.Body className="d-flex">
+                <Container>
+                  <Card.Title className="mb-4"><span className="h3">{this.props.cityName}</span></Card.Title>
+                  <Card.Text>Latitude: {this.props.lat}</Card.Text>
+                  <Card.Text style={{marginTop:"-10px"}}>Longitude: {this.props.lon}</Card.Text>
+                </Container>
+                <Card.Img
+                  src={this.props.mapImage}
+                  style={{ height: "400px", width: "auto" }}
+                ></Card.Img>
               </Card.Body>
             </Card>
-            <Container style={{
-              margin: "0 auto"
-            }}>
-            <img src={this.props.mapImage}
-             alt="" />
-             </Container>
           </Container>
         )}
       </>

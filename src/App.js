@@ -3,6 +3,7 @@ import ExploreForm from "./components/ExploreForm";
 import LocationDisplay from "./components/LocationDisplay";
 import axios from "axios";
 import Navbar from 'react-bootstrap/Navbar';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends React.Component {
   constructor(props) {
@@ -36,8 +37,8 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <Navbar>
-          <Navbar.Brand href="#home">City Explorer</Navbar.Brand>
+        <Navbar bg="dark" style={{height:"100px", marginBottom:"20px"}}>
+          <Navbar.Brand href="#home"><span className="text-white h1">City Explorer</span></Navbar.Brand>
         </Navbar>
         <ExploreForm
           updateLoc={this.updateLocation}
