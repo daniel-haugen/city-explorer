@@ -9,7 +9,7 @@ The City Explorer app is designed to provide
 
 ## Getting Started
 <!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
- 
+
 (Make sure you have a version of Node.js downloaded on your computer)
  1. Clone the repo down to your local machine.
  2. Navigate to your local copy of the repo and run this command to install app dependencies: `npm install`
@@ -42,33 +42,33 @@ The City Explorer app is designed to provide
 Time Estimates
 For each of the lab features, make an estimate of the time it will take you to complete the feature, and record your start and finish times for that feature:
 
-Name of feature: Setup React repo & api
+**Name of feature: Setup React repo & api**
 Estimate of time needed to complete: 1 hour
 Start time: 1:05pm
-Finish time: 
-Actual time needed to complete:
+Finish time: 2:02pm
+Actual time needed to complete: 57 minutes
 
-Name of feature: Setup API call to Location IQ
+**Name of feature: Setup API call to Location IQ and return Data**
 Estimate of time needed to complete: 2 hours
-Start time:
-Finish time:
-Actual time needed to complete:
+Start time: 2:02pm
+Finish time: 3:57pm
+Actual time needed to complete: 1 hour and 55 mins
 
-Name of feature: Return API call and render data
+**Name of feature: Render map location**
 Estimate of time needed to complete: 2 hours 
-Start time:
-Finish time:
-Actual time needed to complete:
+Start time: 4
+Finish time: 5:30pm
+Actual time needed to complete: 1 hour and 30 mins
 
 
-Name of feature: 
+**Name of feature: f**
 Estimate of time needed to complete: 
 Start time:
 Finish time:
 Actual time needed to complete:
 
 
-Name of feature: 
+**Name of feature: v**
 Estimate of time needed to complete: 
 Start time:
 Finish time:
