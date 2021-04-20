@@ -1,15 +1,19 @@
 import React from "react";
-import { Container, Card } from "react-bootstrap";
+import { Card, Container } from "react-bootstrap";
 
 class LocationDisplay extends React.Component {
   render() {
     return (
       <>
-        {this.props.cityName && 
-          <Container fluid
-          style={{ marginTop: "50px" }}>
+        {this.props.cityName && (
+          <Container fluid>
             <Card
-              style={{ width: "18rem", backgroundColor: "lightblue" }}
+              style={{
+                maxWidth: "55%",
+                margin: "0 auto",
+                backgroundColor: "lightblue",
+                marginTop: "50px"
+              }}
               className="mb-2"
             >
               <Card.Body>
@@ -20,8 +24,14 @@ class LocationDisplay extends React.Component {
                 <Card.Text>Longitude: {this.props.lon}</Card.Text>
               </Card.Body>
             </Card>
+            <Container style={{
+              margin: "0 auto"
+            }}>
+            <img src={this.props.mapImage}
+             alt="" />
+             </Container>
           </Container>
-        }
+        )}
       </>
     );
   }

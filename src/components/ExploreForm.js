@@ -7,16 +7,14 @@ class ExploreForm extends React.Component {
 
   getLocation = async (e) => {
     e.preventDefault();
-    const apiURL = `https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_CITY_EXPLORER}&q=${this.props.searchQuery}&format=json`;
+    const dataAPI = `https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_CITY_EXPLORER}&q=${this.props.searchQuery}&format=json`;
    
-    const response = await axios.get(apiURL);
-    const location = response.data[0];
-
-    console.log(location);
+    const dataResponse = await axios.get(dataAPI);
+    const location = dataResponse.data[0];
     this.props.updateLoc(location);
-
-
+    this.props.getMap();
   }
+  
   
   render() {
     return (
