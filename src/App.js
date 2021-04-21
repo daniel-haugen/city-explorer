@@ -13,18 +13,27 @@ class App extends React.Component {
       location: {},
       cityName: "",
       mapImageURL: "",
+      weather: {}
     };
   }
 
-  updateQuery = (e) => this.setState({ searchQuery: e.target.value });
+  updateQuery = e => this.setState({ searchQuery: e.target.value });
 
-  updateLocation = (e) =>
+  updateLocation = e =>
     this.setState({
       location: {
         lon: e.lon,
         lat: e.lat,
       },
       cityName: e.display_name,
+    });
+
+    updateWeather = e => 
+    this.setState({
+      weather: {
+        description: e.description,
+        date: e.date
+      }
     });
 
   getMap = async () => {
@@ -42,15 +51,19 @@ class App extends React.Component {
         </Navbar>
         <ExploreForm
           updateLoc={this.updateLocation}
+          updateWea={this.updateWeather}
           search={this.updateQuery}
           searchQuery={this.state.searchQuery}
           getMap={this.getMap}
+          lat={this.state.location.lat}
+          lon={this.state.location.lon}
         />
         <LocationDisplay
           cityName={this.state.cityName}
           lat={this.state.location.lat}
           lon={this.state.location.lon}
           mapImage={this.state.mapImageURL}
+          weather={this.state.weather}
         />
       </>
     );

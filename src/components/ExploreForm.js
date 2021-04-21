@@ -8,23 +8,40 @@ class ExploreForm extends React.Component {
     super(props);
     this.state = {
       badSearchAlert: false,
-      errorCode: ''
+      error: {}
     }
   }
 
 showAlert = (e, code) => this.setState({badSearchAlert: e, errorCode: code})
 
   getLocation = async (e) => {
+  try {
     e.preventDefault();
 
+    //api call to location iq for lat and lon data
     const dataAPI = `https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_CITY_EXPLORER}&q=${this.props.searchQuery}&format=json`;
 
-    const dataResponse = await axios.get(dataAPI).catch(this.showAlert(true));
-
+    const dataResponse = await axios.get(dataAPI);
+    
     this.showAlert(false);
     const location = dataResponse.data[0];
+    //send lat and lon data to app.js state
     this.props.updateLoc(location);
+
+    const backend = `http://localhost:3001/weather?lat=${this.props.lat}&lon=${this.props.lon}`
+    const backendResponse = await axios.get(backend);
+    this.showAlert(false);
+    
+    const weatherData = backendResponse.data[0];
+
+    this.props.updateWea(weatherData);
     this.props.getMap();
+    } catch(error) {
+      this.setState({
+        error,
+        badSearchAlert: true,
+      });
+    }
     
   };
 
@@ -38,7 +55,7 @@ showAlert = (e, code) => this.setState({badSearchAlert: e, errorCode: code})
 
             {this.state.badSearchAlert && 
             <Alert style={{width: "300px", marginBottom:"-10px"}} onClose={() => this.showAlert(false)} variant="danger" 
-             dismissible>{this.state.errorCode}Error: Please enter a valid location</Alert>}
+             dismissible>{`Oh No! Error: ${this.state.error.message}`}</Alert>}
 
             <Button variant="primary" className="my-3" style={{width: "150px"}} type="submit">
               Explore!
