@@ -1,6 +1,7 @@
-import React from "react";
-import { Card, Container } from "react-bootstrap";
+import React from "react"
+import { Card, Container } from "react-bootstrap"
 import Weather from './Weather'
+import Movies from './Movies'
 
 class LocationDisplay extends React.Component {
   render() {
@@ -15,6 +16,7 @@ class LocationDisplay extends React.Component {
                   <Card.Text>Latitude: {this.props.lat}</Card.Text>
                   <Card.Text style={{marginTop:"-10px"}}>Longitude: {this.props.lon}</Card.Text>
                   <Weather weather={this.props.weather} />
+                  <Movies movies={this.props.movies} searchQuery={this.props.searchQuery}/>
                 </Container>
                 <Card.Img
                   src={this.props.mapImage}
