@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 
 class App extends React.Component {
+
   constructor(props) {
     super(props);
     this.state = {
@@ -62,14 +63,15 @@ class App extends React.Component {
       return this.setState({movies: movieArr});
     }
 
- 
-
   render() {
+
     return (
       <>
+
         <Navbar bg="dark" className="mb-5" style={{height:"100px", marginBottom:"20px"}}>
           <Navbar.Brand href="#home"><span className="text-white h1">City Explorer</span></Navbar.Brand>
         </Navbar>
+
         <ExploreForm
           updateLoc={this.updateLocation}
           updateWea={this.updateWeather}
@@ -80,6 +82,7 @@ class App extends React.Component {
           getMap={this.getMap}
           getMovies={this.getMovies}
         />
+
         <LocationDisplay
           cityName={this.state.cityName}
           lat={this.state.location.lat}
@@ -89,6 +92,7 @@ class App extends React.Component {
           movies={this.state.movies}
           searchQuery={this.state.searchQuery}
         />
+
       </>
     );
   }

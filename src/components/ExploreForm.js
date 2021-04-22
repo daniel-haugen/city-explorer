@@ -14,10 +14,9 @@ class ExploreForm extends React.Component {
   showAlert = (e, code) =>
     this.setState({ badSearchAlert: e, errorCode: code });
 
-
-
   getLocation = async (e) => {
     try {
+      
       e.preventDefault();
 
       //api call to location iq for lat and lon data
@@ -27,6 +26,7 @@ class ExploreForm extends React.Component {
 
       this.showAlert(false);
       const location = dataResponse.data[0];
+
       //send lat and lon data to app.js state
       this.props.updateLoc(location);
 
@@ -49,7 +49,9 @@ class ExploreForm extends React.Component {
 
   render() {
     return (
+
       <div className="container-fluid" style={{ backgroundColor: "lightgrey" }}>
+
         <Form className="h-100" onSubmit={this.getLocation}>
           <Form.Group className="d-flex flex-column h-100">
             <Form.Label className="h2 mt-3">Choose Your City: </Form.Label>
@@ -76,6 +78,7 @@ class ExploreForm extends React.Component {
             >
               Explore!
             </Button>
+
           </Form.Group>
         </Form>
       </div>
