@@ -56,7 +56,7 @@ class App extends React.Component {
     }
 
     getMovies = async () => {
-      const movieAPI = `https://city-explorer-api-dh.herokuapp.com/movie?cityName=${this.state.searchQuery}`
+      const movieAPI = `http://localhost:3001/movie?cityName=${this.state.searchQuery}`
       const movieResponse = await axios.get(movieAPI);
       const movieArr = movieResponse.data.map(e => e.name);
 

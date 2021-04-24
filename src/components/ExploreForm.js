@@ -31,7 +31,7 @@ class ExploreForm extends React.Component {
       this.props.updateLoc(location);
 
       // api call for weather
-      const backend = `https://city-explorer-api-dh.herokuapp.com/weather?lat=${this.props.lat}&lon=${this.props.lon}`;
+      const backend = `http://localhost:3001/weather?lat=${this.props.lat}&lon=${this.props.lon}`;
       const backendResponse = await axios.get(backend);
       this.showAlert(false);
       const weatherData = backendResponse.data[0];
